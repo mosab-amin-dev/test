@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud system</title>
+
+     <link rel="stylesheet" href="css/all.min.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+ <!-- =========user form========== -->
+
+<div class="w-75 m-auto shadow-lg p-5 my-5 ">
+    
+    <h1 class=" text-center fw-bolder text-uppercase mb-3">crud system</h1>
+
+    <label for="productName" > Product Name : </label>
+    <input id="productName" class=" form-control mb-3" onkeyup="pNameValidation ()" type="text">
+   
+    <label for="productCategory"> Product Category : </label>
+    <input id="productCategory" class=" form-control mb-3" type="text">
+   
+    <label for="productPrice"> Product Price : </label>
+    <input id="productPrice" class=" form-control mb-3" type="text">
+   
+    <label for="productDesc"> Product Description : </label>
+    <textarea id="productDesc" class=" form-control mb-3" type="text"></textarea>
+   
+
+
+    <button id="addBtn" class="btn btn-primary d-block" onclick="AddProduct ()"> Add Product </button>
+    <button id="updateBtn" class="btn btn-info d-none" > update Product </button>
+
+    <button  class="btn btn-danger"> clear </button>
+    
+
+</div>
+
+<!-- ====serch===== -->
+
+<input id="SearchInput" onkeydown="searchProduct()" class="form-control w-50 m-auto m-5" placeholder="Search" type="text" >
+
+<!-- =======table====== -->
+
+<div class="table-responsive w-75 m-auto my-5">
+    <table class="table table-borderless ">
+        <thead>
+            <tr>
+                <th> index</th>
+                <th> Name</th>
+                <th> Category</th>
+                <th> Price</th>
+                <th> Desc</th>
+                <th> Edit</th>
+                <th> Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            
+
+        </tbody>
+
+    </table>
+ 
+</div>
+       
+      
+
+
+
+
+
+
+
+
+
+
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
